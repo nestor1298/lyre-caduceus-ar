@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const starVertices = [];
 
   for (let i = 0; i < starCount; i++) {
-    const x = (Math.random() - 0.5) * 1000;
+    const x = (Math.random() - 0.5) * 1001;
     const y = (Math.random() - 0.5) * 1000;
     const z = -Math.random() * 1000;
     starVertices.push(x, y, z);
