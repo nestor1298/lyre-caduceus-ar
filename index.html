@@ -7,11 +7,21 @@
   <title>The Lyre and the Caduceus</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    canvas#bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  </style>
 </head>
 <body>
+  <canvas id="bg"></canvas>
   <div class="container">
     <h1>The Lyre and the Caduceus</h1>
     <p class="subtitle">A myth rewritten in love and light</p>
