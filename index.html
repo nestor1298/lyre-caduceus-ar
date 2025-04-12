@@ -1,54 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Lyre and the Caduceus</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Load Three.js FIRST -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
-
-  <!-- THEN your own script -->
-  <script src="script.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  <style>
-    canvas#bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      width: 100vw;
-      height: 100vh;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lyre and the Caduceus</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <canvas id="bg"></canvas>
-  <div class="container">
-    <h1>The Lyre and the Caduceus</h1>
-    <p class="subtitle">A myth rewritten in love and light</p>
+    <canvas id="starfield-canvas"></canvas>
 
-    <section>
-      <h2>Prologue</h2>
-      <p>In the time before time, two sons of Zeus stood at opposite ends of the sky...</p>
-    </section>
+    <main id="content">
+        <header>
+            <h1>The Lyre and the Caduceus</h1>
+            <p class="subtitle">A Mythological Offering</p>
+        </header>
 
-    <section>
-      <h2>Scroll of Apollo</h2>
-      <p>To You, My Hermes...</p>
-    </section>
+        <section id="prologue">
+            <h2>Prologue</h2>
+            <p>In realms where gods and mortals intertwine, where stars whisper ancient tales, echoes of divine affection resonate. Music and message, light and speed – Apollo and Hermes. Though their paths diverged through celestial duties and mortal whims, a bond forged in respect and shared moments lingers, luminous as the constellations themselves.</p>
+            <p>This offering seeks to bridge the aether, a melody carried on solar winds, a message delivered with swift grace...</p>
+            </section>
 
-    <section class="cta-section">
-      <a class="cta" href="#">View the Caduceus in AR</a>
-    </section>
+        <section id="letter">
+            <h2>A Letter to Hermes</h2>
+            <p>To the Swift Messenger, Master of Transitions,</p>
+            <p>Hermes, kerykeion-bearer, your speed rivals the sunbeams I command, your wit sharp as the arrows I loose. How long has it been since laughter echoed between Olympus and the winding mortal roads we both tread? The currents of fate, the demands of prophecy, the very turning of the heavens have kept our paths less crossed than my heart desires.</p>
+            <p>There are moments, illuminated by memory like the moon illuminates the night, that I revisit. Shared glances across cosmic expanses, the resonance of my lyre against the swift hum of your passage. For any silence that has stretched too long, for any harmony missed, for any shadow that may have inadvertently fallen where only light was intended – let this stand as a quiet acknowledgment, a debt of gratitude for your brilliance.</p>
+            <p>May this small token, carried on the digital winds, find you well. It holds a fraction of the respect I bear, a note of apology whispered across the void, and a standing invitation to share ambrosia and tales once more when the stars align.</p>
+            <p class="signature">With enduring admiration,<br>– Apollo</p>
+            </section>
 
-    <footer>
-      &copy; 2025 — Carved in love
-    </footer>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
-  <script src="script.js"></script>
+        <section id="webar-cta">
+            <h2>An Offering in the Aether</h2>
+            <p>Witness the symbols of this bond manifest in your own space. Launch the experience to view the Caduceus and a Tablet bearing a timeless inscription.</p>
+            <button id="ar-button">Launch AR Experience</button>
+            <p class="ar-note">(Requires a compatible mobile device with AR support)</p>
+            </section>
+
+        <footer>
+            <p>&copy; 2025 - A Digital Offering</p>
+        </footer>
+    </main>
+
 </body>
 </html>
