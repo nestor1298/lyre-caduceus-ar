@@ -1,67 +1,174 @@
-/* style.css */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Playfair Display', serif;
-  background: url('assets/marble-bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #2c2c2c;
+/* Basic Reset & Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
-  max-width: 800px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 1rem;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+body {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    background-color: #00000a; /* Deep night sky blue/black */
+    color: #e0e0e0; /* Soft white/grey */
+    line-height: 1.7;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Starfield Canvas Styling */
+#starfield-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place behind content */
+    display: block;
+}
+
+/* Main Content Container */
+#content {
+    position: relative; /* Needed for z-index stacking */
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto; /* Center content */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    margin-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3); /* Subtle gold border */
+    padding-bottom: 30px;
 }
 
 h1 {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+    font-size: 2.8em;
+    color: #FFD700; /* Gold color for main title */
+    margin-bottom: 10px;
+    font-weight: normal;
+    letter-spacing: 1px;
 }
 
 .subtitle {
-  text-align: center;
-  font-size: 1.2rem;
-  font-style: italic;
-  margin-bottom: 2rem;
+    font-size: 1.2em;
+    color: #b0c4de; /* Light steel blue */
+    font-style: italic;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 60px;
+    padding: 40px 0;
+    text-align: left; /* Align text left within sections */
+    border-bottom: 1px solid rgba(176, 196, 222, 0.2); /* Subtle light blue border */
+}
+
+section:last-of-type {
+    border-bottom: none;
 }
 
 h2 {
-  margin-top: 2rem;
-  font-size: 1.8rem;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 0.5rem;
+    font-size: 1.8em;
+    color: #b0c4de; /* Light steel blue */
+    margin-bottom: 25px;
+    text-align: center; /* Center section headings */
+    font-weight: normal;
 }
 
-.cta-section {
-  margin-top: 3rem;
-  text-align: center;
+p {
+    margin-bottom: 1.5em;
+    font-size: 1.05em;
+    color: #cccccc; /* Lighter grey for readability */
 }
 
-.cta {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #e0d6c9;
-  border: 2px solid #2c2c2c;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  color: #2c2c2c;
-  font-weight: bold;
-  transition: background-color 0.3s;
+/* Specific Text Styles */
+#letter .signature {
+    text-align: right;
+    font-style: italic;
+    color: #FFD700; /* Gold for signature */
+    margin-top: 30px;
 }
 
-.cta:hover {
-  background-color: #d5c7b8;
+/* WebAR Call-to-Action Styling */
+#webar-cta {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.05); /* Slight highlight */
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 40px;
 }
 
+#ar-button {
+    display: inline-block;
+    background-color: #FFD700; /* Gold */
+    color: #1a1a1a; /* Dark text */
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: inherit;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+#ar-button:hover {
+    background-color: #f0c800; /* Slightly darker gold on hover */
+    transform: translateY(-2px);
+}
+
+.ar-note {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Footer Styling */
 footer {
-  text-align: center;
-  margin-top: 4rem;
-  font-size: 0.9rem;
-  color: #555;
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 215, 0, 0.3); /* Subtle gold border */
+    font-size: 0.9em;
+    color: #aaa;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    #content {
+        padding: 40px 15px;
+    }
+    p {
+        font-size: 1em;
+    }
+    #ar-button {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    .subtitle {
+        font-size: 1em;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+    section {
+         padding: 30px 0;
+         margin-bottom: 40px;
+    }
+}
