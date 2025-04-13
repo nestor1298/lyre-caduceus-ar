@@ -31,7 +31,6 @@ body {
     max-width: 800px;
     margin: 0 auto; /* Center content */
     padding: 60px 20px;
-    /* text-align: center; Removed default center align for main content */
 }
 
 /* Header Styling */
@@ -39,7 +38,7 @@ header {
     margin-bottom: 60px;
     border-bottom: 1px solid rgba(255, 215, 0, 0.3); /* Subtle gold border */
     padding-bottom: 30px;
-    text-align: center; /* Center header text */
+    text-align: center;
 }
 
 h1 {
@@ -60,12 +59,11 @@ h1 {
 section {
     margin-bottom: 60px;
     padding: 40px 0;
-    /* text-align: left; Removed default left align here */
     border-bottom: 1px solid rgba(176, 196, 222, 0.2); /* Subtle light blue border */
 }
 
 section:last-of-type {
-    border-bottom: none; /* Remove border from last section */
+    border-bottom: none;
 }
 
 /* General Heading Styling within sections */
@@ -73,7 +71,7 @@ h2 {
     font-size: 1.8em;
     color: #b0c4de; /* Light steel blue */
     margin-bottom: 25px;
-    text-align: center; /* Center section headings */
+    text-align: center;
     font-weight: normal;
 }
 
@@ -81,19 +79,19 @@ h2 {
 p {
     margin-bottom: 1.5em;
     font-size: 1.05em;
-    color: #cccccc; /* Lighter grey for readability */
-    text-align: justify; /* Justify text for block paragraphs */
+    color: #cccccc;
+    text-align: justify;
 }
 
 /* --- Styling for the Myth Story Section (#prologue) --- */
 #prologue {
-    padding-top: 0; /* Reduce top padding if header provides enough space */
+    padding-top: 0;
 }
 
 .myth-act {
-    margin-bottom: 50px; /* Space between acts */
+    margin-bottom: 50px;
     padding-bottom: 30px;
-    border-bottom: 1px dashed rgba(176, 196, 222, 0.15); /* Dashed separator */
+    border-bottom: 1px dashed rgba(176, 196, 222, 0.15);
 }
 
 .myth-act:last-child {
@@ -101,27 +99,45 @@ p {
     border-bottom: none;
 }
 
+/* Style for images within the myth acts - UPDATED */
+.act-image {
+    display: block;
+    /* Make images smaller: Use percentage width with a pixel max */
+    width: 60%; /* Adjust percentage as needed */
+    max-width: 300px; /* Adjust max pixel width as needed */
+    height: auto;
+    /* Adjusted margin: Less space below the image */
+    margin: 20px auto 15px auto; /* Top, Auto(H), Bottom, Auto(H) */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(176, 196, 222, 0.1);
+    border-radius: 4px;
+}
+
+
+/* Style for the Act Titles (now Roman numerals) - UPDATED */
 #prologue h3 {
-    font-size: 1.5em; /* Slightly smaller than section H2 */
-    color: #FFD700; /* Gold color for act titles */
+    font-size: 1.5em;
+    color: #FFD700;
     text-align: center;
-    margin-bottom: 25px;
+    /* Removed top margin, bottom margin controls space before text */
+    margin: 0 auto 25px auto; /* Top, H-Auto, Bottom, H-Auto */
     font-weight: bold;
     letter-spacing: 0.5px;
 }
 
+
 #prologue p {
-    margin-bottom: 1em; /* Standard paragraph spacing */
-    text-align: justify; /* Justify text in the story */
+    margin-bottom: 1em;
+    text-align: justify;
 }
 
 /* Style for the emphasized lines */
 #prologue em {
-    display: block; /* Make it a block element */
-    text-align: center; /* Center align the quote */
+    display: block;
+    text-align: center;
     font-style: italic;
-    color: #FFD700; /* Gold color */
-    margin-top: 20px; /* Add space above */
+    color: #FFD700;
+    margin-top: 20px;
     font-size: 1.1em;
     font-weight: bold;
 }
@@ -129,23 +145,12 @@ p {
 /* Style for blockquotes (Narración parts) */
 #prologue blockquote {
     font-style: italic;
-    color: #b0c4de; /* Light steel blue, distinct from main text */
+    color: #b0c4de;
     padding-left: 25px;
-    margin: 20px 10px 20px 30px; /* Top, Right, Bottom, Left margin */
-    border-left: 3px solid rgba(255, 215, 0, 0.5); /* Gold border */
+    margin: 20px 10px 20px 30px;
+    border-left: 3px solid rgba(255, 215, 0, 0.5);
     line-height: 1.6;
-    text-align: left; /* Keep narration left-aligned */
-}
-
-/* Style for images within the myth acts */
-.act-image {
-    display: block; /* Make image a block element */
-    max-width: 80%; /* Max width relative to container */
-    height: auto; /* Maintain aspect ratio */
-    margin: 30px auto 30px auto; /* Top/Bottom margin, auto left/right for centering */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
-    box-shadow: 0 0 15px rgba(176, 196, 222, 0.1); /* Subtle glow */
-    border-radius: 4px; /* Slightly rounded corners */
+    text-align: left;
 }
 
 
@@ -159,63 +164,63 @@ p {
 #letter .signature {
     text-align: right;
     font-style: italic;
-    color: #FFD700; /* Gold for signature */
+    color: #FFD700;
     margin-top: 30px;
 }
 
 /* --- WebAR Call-to-Action Styling --- */
 #webar-cta {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.05); /* Slight highlight */
+    background-color: rgba(255, 255, 255, 0.05);
     padding: 40px 20px;
     border-radius: 8px;
-    margin-top: 40px; /* Reset margin if needed */
+    margin-top: 40px;
 }
 #webar-cta p {
-    text-align: center; /* Center text within CTA */
-    margin-bottom: 1.2em; /* Adjust spacing */
+    text-align: center;
+    margin-bottom: 1.2em;
 }
 
 
 /* Container for the AR links/buttons */
 .ar-links-container {
     margin-top: 20px;
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center buttons */
-    gap: 20px; /* Space between buttons */
-    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 /* Style the <a> links to look like buttons */
 .ar-link-button {
-    display: inline-block; /* Treat as block but allow side-by-side */
-    background-color: #FFD700; /* Gold */
-    color: #1a1a1a; /* Dark text */
+    display: inline-block;
+    background-color: #FFD700;
+    color: #1a1a1a;
     border: none;
-    padding: 15px 30px; /* Adjust padding */
-    font-size: 1.05em; /* Adjust font size */
+    padding: 15px 30px;
+    font-size: 1.05em;
     font-weight: bold;
     font-family: inherit;
     border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    text-decoration: none; /* Remove underline from link */
+    text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    min-width: 180px; /* Ensure buttons have a decent minimum width */
-    text-align: center; /* Center text within the button */
+    min-width: 180px;
+    text-align: center;
 }
 
 .ar-link-button:hover {
-    background-color: #f0c800; /* Slightly darker gold on hover */
-    transform: translateY(-2px); /* Subtle lift effect */
-    color: #000; /* Ensure text color remains readable on hover */
+    background-color: #f0c800;
+    transform: translateY(-2px);
+    color: #000;
 }
 
 .ar-note {
     font-size: 0.9em;
     color: #aaa;
-    margin-top: 25px; /* Increased margin */
+    margin-top: 25px;
     text-align: center;
 }
 
@@ -224,33 +229,26 @@ footer {
     text-align: center;
     margin-top: 60px;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 215, 0, 0.3); /* Subtle gold border */
+    border-top: 1px solid rgba(255, 215, 0, 0.3);
     font-size: 0.9em;
     color: #aaa;
 }
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2.2em;
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.6em; }
+    #prologue h3 { font-size: 1.3em; margin-bottom: 20px; }
+    #content { padding: 40px 15px; }
+    p { font-size: 1em; }
+
+    /* Adjust image size for medium screens */
+    .act-image {
+        width: 70%;
+        max-width: 280px; /* Adjust max pixel width */
+        margin: 15px auto 10px auto; /* Adjust margins */
     }
-    h2 {
-        font-size: 1.6em;
-    }
-    #prologue h3 {
-        font-size: 1.3em;
-    }
-    #content {
-        padding: 40px 15px;
-    }
-    p {
-        font-size: 1em;
-    }
-     .act-image {
-        max-width: 90%; /* Allow images to be slightly larger on medium screens */
-        margin: 25px auto;
-    }
-     #prologue blockquote {
+    #prologue blockquote {
         margin-left: 15px;
         padding-left: 15px;
     }
@@ -260,48 +258,40 @@ footer {
         min-width: 160px;
     }
     .ar-links-container {
-        gap: 15px; /* Slightly reduce gap */
+        gap: 15px;
     }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 1.8em;
-    }
-    .subtitle {
-        font-size: 1em;
-    }
-    h2 {
-        font-size: 1.4em;
-    }
-     #prologue h3 {
-        font-size: 1.2em;
-    }
-    section {
-         padding: 30px 0;
-         margin-bottom: 40px;
-    }
-     .act-image {
-        max-width: 100%; /* Allow images to take full width */
-        margin: 20px auto;
+    h1 { font-size: 1.8em; }
+    .subtitle { font-size: 1em; }
+    h2 { font-size: 1.4em; }
+    #prologue h3 { font-size: 1.2em; margin-bottom: 15px; }
+    section { padding: 30px 0; margin-bottom: 40px; }
+
+    /* Adjust image size for small screens */
+    .act-image {
+        width: 80%; /* Slightly larger percentage on small screens */
+        max-width: 250px; /* Adjust max pixel width */
+        margin: 10px auto 10px auto; /* Adjust margins */
         box-shadow: 0 0 10px rgba(176, 196, 222, 0.1);
     }
-     #prologue blockquote {
-        margin: 15px 5px 15px 10px; /* Adjust margins */
+    #prologue blockquote {
+        margin: 15px 5px 15px 10px;
         padding-left: 10px;
         border-left-width: 2px;
     }
     .ar-link-button {
         padding: 10px 20px;
         font-size: 0.95em;
-        min-width: unset; /* Allow button to shrink */
-        width: 100%; /* Make buttons full width */
-        max-width: 280px; /* Limit max width */
-        margin: 5px auto; /* Center when stacked */
+        min-width: unset;
+        width: 100%;
+        max-width: 280px;
+        margin: 5px auto;
     }
      .ar-links-container {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center; /* Center stacked buttons */
-        gap: 10px; /* Reduce gap when stacked */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 }
