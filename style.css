@@ -99,28 +99,27 @@ p {
     border-bottom: none;
 }
 
-/* Style for images within the myth acts - UPDATED */
+/* Style for images within the myth acts - SIZE SIGNIFICANTLY REDUCED */
 .act-image {
     display: block;
-    /* Make images smaller: Use percentage width with a pixel max */
-    width: 60%; /* Adjust percentage as needed */
-    max-width: 300px; /* Adjust max pixel width as needed */
+    /* Make images much smaller */
+    width: 35%; /* Smaller percentage */
+    max-width: 150px; /* Significantly smaller max pixel width */
     height: auto;
-    /* Adjusted margin: Less space below the image */
-    margin: 20px auto 15px auto; /* Top, Auto(H), Bottom, Auto(H) */
+    /* Adjusted margin for smaller image */
+    margin: 15px auto 10px auto; /* Top, H-Auto, Bottom, H-Auto */
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 15px rgba(176, 196, 222, 0.1);
-    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(176, 196, 222, 0.1); /* Reduced shadow slightly */
+    border-radius: 3px; /* Slightly smaller radius */
 }
 
 
-/* Style for the Act Titles (now Roman numerals) - UPDATED */
+/* Style for the Act Titles (Roman numerals) */
 #prologue h3 {
     font-size: 1.5em;
     color: #FFD700;
     text-align: center;
-    /* Removed top margin, bottom margin controls space before text */
-    margin: 0 auto 25px auto; /* Top, H-Auto, Bottom, H-Auto */
+    margin: 0 auto 25px auto;
     font-weight: bold;
     letter-spacing: 0.5px;
 }
@@ -242,11 +241,11 @@ footer {
     #content { padding: 40px 15px; }
     p { font-size: 1em; }
 
-    /* Adjust image size for medium screens */
+    /* Adjust image size for medium screens - SMALLER */
     .act-image {
-        width: 70%;
-        max-width: 280px; /* Adjust max pixel width */
-        margin: 15px auto 10px auto; /* Adjust margins */
+        width: 40%; /* Smaller percentage */
+        max-width: 140px; /* Smaller max pixel width */
+        margin: 15px auto 8px auto; /* Adjust margins */
     }
     #prologue blockquote {
         margin-left: 15px;
@@ -269,12 +268,12 @@ footer {
     #prologue h3 { font-size: 1.2em; margin-bottom: 15px; }
     section { padding: 30px 0; margin-bottom: 40px; }
 
-    /* Adjust image size for small screens */
+    /* Adjust image size for small screens - SMALLER */
     .act-image {
-        width: 80%; /* Slightly larger percentage on small screens */
-        max-width: 250px; /* Adjust max pixel width */
-        margin: 10px auto 10px auto; /* Adjust margins */
-        box-shadow: 0 0 10px rgba(176, 196, 222, 0.1);
+        width: 45%; /* Adjust percentage */
+        max-width: 120px; /* Smaller max pixel width */
+        margin: 10px auto 5px auto; /* Adjust margins */
+        box-shadow: 0 0 8px rgba(176, 196, 222, 0.1); /* Slightly smaller shadow */
     }
     #prologue blockquote {
         margin: 15px 5px 15px 10px;
