@@ -1,4 +1,93 @@
-/* ... (Keep all previous styles from body, canvas, content, header, sections, footer etc.) ... */
+/* Basic Reset & Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    background-color: #00000a; /* Deep night sky blue/black */
+    color: #e0e0e0; /* Soft white/grey */
+    line-height: 1.7;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Starfield Canvas Styling */
+#starfield-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place behind content */
+    display: block;
+}
+
+/* Main Content Container */
+#content {
+    position: relative; /* Needed for z-index stacking */
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto; /* Center content */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    margin-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3); /* Subtle gold border */
+    padding-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.8em;
+    color: #FFD700; /* Gold color for main title */
+    margin-bottom: 10px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #b0c4de; /* Light steel blue */
+    font-style: italic;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 60px;
+    padding: 40px 0;
+    text-align: left; /* Align text left within sections */
+    border-bottom: 1px solid rgba(176, 196, 222, 0.2); /* Subtle light blue border */
+}
+
+section:last-of-type {
+    border-bottom: none; /* Remove border from last section */
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #b0c4de; /* Light steel blue */
+    margin-bottom: 25px;
+    text-align: center; /* Center section headings */
+    font-weight: normal;
+}
+
+p {
+    margin-bottom: 1.5em;
+    font-size: 1.05em;
+    color: #cccccc; /* Lighter grey for readability */
+}
+
+/* Specific Text Styles */
+#letter .signature {
+    text-align: right;
+    font-style: italic;
+    color: #FFD700; /* Gold for signature */
+    margin-top: 30px;
+}
 
 /* WebAR Call-to-Action Styling */
 #webar-cta {
@@ -41,7 +130,7 @@
 .ar-link-button:hover {
     background-color: #f0c800; /* Slightly darker gold on hover */
     transform: translateY(-2px); /* Subtle lift effect */
-    color: #000;
+    color: #000; /* Ensure text color remains readable on hover */
 }
 
 .ar-note {
@@ -49,38 +138,6 @@
     color: #aaa;
     margin-top: 25px; /* Increased margin */
     text-align: center;
-}
-
-
-/* ... (Keep Responsive Adjustments, update if necessary for the buttons) ... */
-
-@media (max-width: 768px) {
-    /* ... other responsive styles ... */
-    .ar-link-button {
-        padding: 12px 25px;
-        font-size: 1em;
-        min-width: 160px;
-    }
-    .ar-links-container {
-        gap: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-     /* ... other responsive styles ... */
-    .ar-link-button {
-        padding: 10px 20px;
-        font-size: 0.95em;
-        min-width: 140px;
-        width: 100%; /* Make buttons full width on very small screens */
-        max-width: 250px; /* Optional: Limit max width even when full width */
-        margin: 5px auto; /* Center when stacked */
-    }
-     .ar-links-container {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center; /* Center stacked buttons */
-        gap: 10px;
-    }
 }
 
 /* Footer Styling */
@@ -91,4 +148,57 @@ footer {
     border-top: 1px solid rgba(255, 215, 0, 0.3); /* Subtle gold border */
     font-size: 0.9em;
     color: #aaa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    #content {
+        padding: 40px 15px;
+    }
+    p {
+        font-size: 1em;
+    }
+    .ar-link-button {
+        padding: 12px 25px;
+        font-size: 1em;
+        min-width: 160px;
+    }
+    .ar-links-container {
+        gap: 15px; /* Slightly reduce gap */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    .subtitle {
+        font-size: 1em;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+    section {
+         padding: 30px 0;
+         margin-bottom: 40px;
+    }
+    .ar-link-button {
+        padding: 10px 20px;
+        font-size: 0.95em;
+        min-width: unset; /* Allow button to shrink */
+        width: 100%; /* Make buttons full width */
+        max-width: 280px; /* Limit max width */
+        margin: 5px auto; /* Center when stacked */
+    }
+     .ar-links-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center stacked buttons */
+        gap: 10px; /* Reduce gap when stacked */
+    }
 }
