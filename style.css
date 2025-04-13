@@ -31,7 +31,7 @@ body {
     max-width: 800px;
     margin: 0 auto; /* Center content */
     padding: 60px 20px;
-    text-align: center;
+    /* text-align: center; Removed default center align for main content */
 }
 
 /* Header Styling */
@@ -39,6 +39,7 @@ header {
     margin-bottom: 60px;
     border-bottom: 1px solid rgba(255, 215, 0, 0.3); /* Subtle gold border */
     padding-bottom: 30px;
+    text-align: center; /* Center header text */
 }
 
 h1 {
@@ -55,11 +56,11 @@ h1 {
     font-style: italic;
 }
 
-/* Section Styling */
+/* General Section Styling */
 section {
     margin-bottom: 60px;
     padding: 40px 0;
-    text-align: left; /* Align text left within sections */
+    /* text-align: left; Removed default left align here */
     border-bottom: 1px solid rgba(176, 196, 222, 0.2); /* Subtle light blue border */
 }
 
@@ -67,6 +68,7 @@ section:last-of-type {
     border-bottom: none; /* Remove border from last section */
 }
 
+/* General Heading Styling within sections */
 h2 {
     font-size: 1.8em;
     color: #b0c4de; /* Light steel blue */
@@ -75,13 +77,85 @@ h2 {
     font-weight: normal;
 }
 
+/* General Paragraph Styling */
 p {
     margin-bottom: 1.5em;
     font-size: 1.05em;
     color: #cccccc; /* Lighter grey for readability */
+    text-align: justify; /* Justify text for block paragraphs */
 }
 
-/* Specific Text Styles */
+/* --- Styling for the Myth Story Section (#prologue) --- */
+#prologue {
+    padding-top: 0; /* Reduce top padding if header provides enough space */
+}
+
+.myth-act {
+    margin-bottom: 50px; /* Space between acts */
+    padding-bottom: 30px;
+    border-bottom: 1px dashed rgba(176, 196, 222, 0.15); /* Dashed separator */
+}
+
+.myth-act:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+#prologue h3 {
+    font-size: 1.5em; /* Slightly smaller than section H2 */
+    color: #FFD700; /* Gold color for act titles */
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+#prologue p {
+    margin-bottom: 1em; /* Standard paragraph spacing */
+    text-align: justify; /* Justify text in the story */
+}
+
+/* Style for the emphasized lines */
+#prologue em {
+    display: block; /* Make it a block element */
+    text-align: center; /* Center align the quote */
+    font-style: italic;
+    color: #FFD700; /* Gold color */
+    margin-top: 20px; /* Add space above */
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Style for blockquotes (Narración parts) */
+#prologue blockquote {
+    font-style: italic;
+    color: #b0c4de; /* Light steel blue, distinct from main text */
+    padding-left: 25px;
+    margin: 20px 10px 20px 30px; /* Top, Right, Bottom, Left margin */
+    border-left: 3px solid rgba(255, 215, 0, 0.5); /* Gold border */
+    line-height: 1.6;
+    text-align: left; /* Keep narration left-aligned */
+}
+
+/* Style for images within the myth acts */
+.act-image {
+    display: block; /* Make image a block element */
+    max-width: 80%; /* Max width relative to container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 30px auto 30px auto; /* Top/Bottom margin, auto left/right for centering */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    box-shadow: 0 0 15px rgba(176, 196, 222, 0.1); /* Subtle glow */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+
+/* --- Styling for the Letter Section (#letter) --- */
+#letter h2 {
+     margin-bottom: 30px;
+}
+#letter p {
+    text-align: justify;
+}
 #letter .signature {
     text-align: right;
     font-style: italic;
@@ -89,14 +163,19 @@ p {
     margin-top: 30px;
 }
 
-/* WebAR Call-to-Action Styling */
+/* --- WebAR Call-to-Action Styling --- */
 #webar-cta {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.05); /* Slight highlight */
     padding: 40px 20px;
     border-radius: 8px;
-    margin-top: 40px;
+    margin-top: 40px; /* Reset margin if needed */
 }
+#webar-cta p {
+    text-align: center; /* Center text within CTA */
+    margin-bottom: 1.2em; /* Adjust spacing */
+}
+
 
 /* Container for the AR links/buttons */
 .ar-links-container {
@@ -150,7 +229,7 @@ footer {
     color: #aaa;
 }
 
-/* Responsive Adjustments */
+/* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
     h1 {
         font-size: 2.2em;
@@ -158,11 +237,22 @@ footer {
     h2 {
         font-size: 1.6em;
     }
+    #prologue h3 {
+        font-size: 1.3em;
+    }
     #content {
         padding: 40px 15px;
     }
     p {
         font-size: 1em;
+    }
+     .act-image {
+        max-width: 90%; /* Allow images to be slightly larger on medium screens */
+        margin: 25px auto;
+    }
+     #prologue blockquote {
+        margin-left: 15px;
+        padding-left: 15px;
     }
     .ar-link-button {
         padding: 12px 25px;
@@ -184,9 +274,22 @@ footer {
     h2 {
         font-size: 1.4em;
     }
+     #prologue h3 {
+        font-size: 1.2em;
+    }
     section {
          padding: 30px 0;
          margin-bottom: 40px;
+    }
+     .act-image {
+        max-width: 100%; /* Allow images to take full width */
+        margin: 20px auto;
+        box-shadow: 0 0 10px rgba(176, 196, 222, 0.1);
+    }
+     #prologue blockquote {
+        margin: 15px 5px 15px 10px; /* Adjust margins */
+        padding-left: 10px;
+        border-left-width: 2px;
     }
     .ar-link-button {
         padding: 10px 20px;
